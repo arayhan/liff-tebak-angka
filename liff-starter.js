@@ -106,7 +106,7 @@ function registerButtonHandlers() {
 		.getElementById("openWindowButton")
 		.addEventListener("click", function() {
 			liff.openWindow({
-				url: "https://belajar-liff-game.herokuapp.com", // Isi dengan Endpoint URL aplikasi web Anda
+				url: "https://liff-tebak-angka.herokuapp.com", // Isi dengan Endpoint URL aplikasi web Anda
 				external: true
 			});
 		});
