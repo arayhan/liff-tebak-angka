@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	background: #fafafa;
+	font-family: "Rubik";
+	padding: 0 15px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	min-height: 100vh;
+	transform: translateY(-20px);
+}
+
+.container .header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.container .header .title {
+	font-family: "McLaren", cursive;
+	font-size: 3em;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.container .header .sub-title {
+	font-size: 1.3em;
+	color: #aaa;
+}
+
+.container .content {
+	background: white;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(50, 50, 50, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 700px;
+	max-width: 100%;
+}
+
+.container .content input {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	padding: 15px 0;
+	margin-bottom: 30px;
+	font-size: 3em;
+	text-align: center;
+	outline: none;
+	width: 150px;
+	font-family: "McLaren", cursive;
+	letter-spacing: 10px;
+}
+
+.btnAuth {
+	margin-top: 15px;
+	padding: 13px 35px;
+	border: 1.3px solid #29859c;
+	border-radius: 5px;
+	font-size: 1.1em;
+	font-family: "Rubik";
+	background: transparent;
+	color: #29859c;
+	cursor: pointer;
+	position: fixed;
+	outline: none;
+	top: 20px;
+	right: 20px;
+	transition: all 300ms ease;
+}
+
+.btnAuth.logout {
+	border: 1.3px solid #b62727;
+	color: #b62727;
+}
+
+.btnAuth:hover {
+	background: rgba(41, 133, 156, 0.1);
+}
+
+.btnAuth.logout:hover {
+	background: rgba(182, 39, 39, 0.1);
+}
+
+.container .content button {
+	padding: 17px 50px;
+	border: 0;
+	border-radius: 5px;
+	font-size: 1.5em;
+	font-family: "Rubik";
+	background: #173f5f;
+	color: white;
+	cursor: pointer;
+	transition: all 300ms ease;
+}
+
+.container .content button:hover {
+	background: #1d5380;
+}
+
+.container .footer {
+	margin-top: 20px;
+	font-size: 1.2em;
+}
+
+#successMessage {
+	color: #239586;
+}
+
+.container .footer {
+	margin-bottom: 40px;
+}
+.container .footer mark {
+	margin-top: 20px;
+	font-size: 1.2em;
+	padding: 5px;
+}
+
+.copyright {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #f0f0f0;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+ul,
+ol {
+	margin-left: 25px;
+	padding: 10px 0;
+}
+
+.hidden {
+	display: none;
+}
