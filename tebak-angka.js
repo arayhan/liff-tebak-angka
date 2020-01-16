@@ -9,7 +9,13 @@ $(document).ready(function() {
 	if (userData) {
 		$("#btnLogin").hide();
 		$("#btnLogout").show();
-		$("#welcomeMessage").html("Selamat Datang, " + userData.displayName);
+		$("#welcomeMessage").html(
+			"Selamat Datang, " +
+				userData.displayName +
+				" <img src='" +
+				userData.pictureUrl +
+				"'>"
+		);
 	} else {
 		$("#btnLogin").show();
 		$("#btnLogout").hide();
