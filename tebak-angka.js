@@ -8,12 +8,13 @@ $(document).ready(function() {
 	$("#kesempatan").html(kesempatan);
 	$("#successMessage").hide();
 
-	if (!userData) {
-		$("#btnLogin").show();
-		$("#btnLogout").hide();
-	} else {
+	if (userData) {
 		$("#btnLogin").hide();
 		$("#btnLogout").show();
+		$("#welcomeMessage").html("Selamat Datang, " + userData.displayName);
+	} else {
+		$("#btnLogin").show();
+		$("#btnLogout").hide();
 	}
 
 	$("#btnTebak").click(function() {
