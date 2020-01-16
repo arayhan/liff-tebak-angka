@@ -86,7 +86,6 @@ function displayLiffData() {
 	document.getElementById("isLoggedIn").textContent = liff.isLoggedIn();
 	liff.getProfile().then(function(data) {
 		localStorage.setItem("userData", JSON.stringify(data));
-		window.location.reload();
 	});
 }
 
@@ -130,6 +129,7 @@ function registerButtonHandlers() {
 		.addEventListener("click", function() {
 			if (!liff.isLoggedIn()) {
 				liff.login();
+				window.location.reload();
 			}
 		});
 
