@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	const randomNumber = Math.ceil(Math.random() * 100);
-	let kesempatan = 7;
+	let kesempatan = 10;
 	let userData = JSON.parse(localStorage.getItem("userData"));
 
 	$("#kesempatan").html(kesempatan);
