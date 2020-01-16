@@ -84,9 +84,6 @@ function initializeApp() {
 function displayLiffData() {
 	document.getElementById("isInClient").textContent = liff.isInClient();
 	document.getElementById("isLoggedIn").textContent = liff.isLoggedIn();
-	if (liff.isLoggedIn()) {
-		localStorage.setItem("userData", liff.getProfile());
-	}
 }
 
 /**
@@ -128,7 +125,9 @@ function registerButtonHandlers() {
 		.getElementById("liffLoginButton")
 		.addEventListener("click", function() {
 			if (!liff.isLoggedIn()) {
-				liff.login();
+				liff.login().then(function() {
+					localStorage.setItem("userData", liff.getProfile());
+				});
 			}
 		});
 
