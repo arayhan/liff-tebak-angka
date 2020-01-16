@@ -33,7 +33,7 @@ $(document).ready(function() {
 		let icon = "";
 		let title = "";
 		let text = "";
-		let showRefresh = kesempatan + 1 === 0 ? true : false;
+		let showRefresh = kesempatan === 0 ? true : false;
 
 		if (value == randomNumber) {
 			icon = "success";
