@@ -9,6 +9,7 @@ html {
 	background: #fafafa;
 	font-family: "Rubik";
 	padding: 0 15px;
+	line-height: 1.5em;
 }
 
 .container {
@@ -16,7 +17,7 @@ html {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding-top: 50px;
+	padding-top: 130px;
 	padding-bottom: 100px;
 	min-height: 100vh;
 	transform: translateY(-20px);
@@ -29,8 +30,9 @@ html {
 .container .header .title {
 	font-family: "McLaren", cursive;
 	font-size: 3em;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	font-weight: bold;
+	line-height: 1.2em;
 }
 
 .container .header .sub-title {
@@ -63,6 +65,70 @@ html {
 	letter-spacing: 10px;
 }
 
+.btn {
+	margin-top: 15px;
+	padding: 10px 32px;
+	border: 1.3px solid #2cb833;
+	font-size: 1em;
+	font-family: "Rubik";
+	background: transparent;
+	color: #2cb833;
+	cursor: pointer;
+	outline: none;
+	transition: all 300ms ease;
+}
+.btn:hover {
+	background: rgba(44, 184, 51, 0.1);
+}
+
+.buttonGroup {
+	margin-bottom: 15px;
+}
+.buttonGroup .buttonRow {
+	display: flex;
+}
+.buttonGroup .buttonRow {
+	display: flex;
+}
+.buttonGroup .buttonRow .btn {
+	flex: 1;
+}
+.buttonGroup .buttonRow .btn:not(:last-child) {
+	border-right: none;
+}
+.buttonGroup .buttonRow .btn:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.buttonGroup .buttonRow .btn:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+	.buttonGroup .buttonRow {
+		flex-direction: column;
+	}
+	.buttonGroup .buttonRow .btn {
+		margin: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.buttonGroup .buttonRow .btn:not(:last-child) {
+		border-right: 1.3px solid #2cb833;
+		border-bottom: none;
+	}
+	.buttonGroup .buttonRow .btn:first-child {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.buttonGroup .buttonRow .btn:last-child {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+}
+
 .btnAuth {
 	margin-top: 15px;
 	padding: 13px 35px;
@@ -91,6 +157,18 @@ html {
 
 .btnAuth.logout:hover {
 	background: rgba(182, 39, 39, 0.1);
+}
+
+#liffData table {
+	text-align: left;
+	margin-top: 10px;
+}
+
+#liffData table tr th {
+	width: 100px;
+}
+#liffData table tr td {
+	padding-right: 5px;
 }
 
 .container .content button {

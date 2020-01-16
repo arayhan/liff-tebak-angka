@@ -49,13 +49,13 @@
 				<!-- ACTION BUTTONS -->
 				<div class="buttonGroup">
 					<div class="buttonRow">
-						<button id="openWindowButton" class="btn btn-success btn-small">
+						<button id="openWindowButton" class="btn">
 							Open External Window
 						</button>
-						<button id="closeWindowButton" class="btn btn-danger btn-small">
+						<button id="closeWindowButton" class="btn">
 							Close LIFF App
 						</button>
-						<button id="sendMessageButton" class="btn btn-warning btn-small">
+						<button id="sendMessageButton" class="btn">
 							Send Message
 						</button>
 					</div>
@@ -66,12 +66,14 @@
 					<h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
 					<table>
 						<tr>
-							<th>isInClient :</th>
-							<td id="isInClient" class="textLeft"></td>
+							<th>isInClient</th>
+							<td>:</td`>
+							<td id="isInClient"></td>
 						</tr>
 						<tr>
-							<th>isLoggedIn :</th>
-							<td id="isLoggedIn" class="textLeft"></td>
+							<th>isLoggedIn</th>
+							<td>:</td>
+							<td id="isLoggedIn"></td>
 						</tr>
 					</table>
 				</div>
@@ -102,6 +104,7 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- LIFF ID ERROR -->
 			<div id="liffIdErrorMessage" class="hidden">
 				<p>You have not assigned any value for LIFF ID.</p>

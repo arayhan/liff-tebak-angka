@@ -84,6 +84,9 @@ function initializeApp() {
 function displayLiffData() {
 	document.getElementById("isInClient").textContent = liff.isInClient();
 	document.getElementById("isLoggedIn").textContent = liff.isLoggedIn();
+	if (liff.isLoggedIn()) {
+		localStorage.setItem("userData", liff.getProfile());
+	}
 }
 
 /**
@@ -134,6 +137,7 @@ function registerButtonHandlers() {
 		.addEventListener("click", function() {
 			if (liff.isLoggedIn()) {
 				liff.logout();
+				localStorage.removeItem("userData");
 				window.location.reload();
 			}
 		});
@@ -148,11 +152,11 @@ function registerButtonHandlers() {
 					.sendMessages([
 						{
 							type: "text",
-							text: "Anda telah menggunakan fitur Send Message!"
+							text: "Ayo ikutan main tebak angka!"
 						}
 					])
 					.then(function() {
-						window.alert("Ini adalah pesan dari fitur Send Message");
+						window.alert("https://liff-tebak-angka.herokuapp.com/");
 					})
 					.catch(function(error) {
 						window.alert("Error sending message: " + error);

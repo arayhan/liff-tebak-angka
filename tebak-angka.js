@@ -1,12 +1,14 @@
 $(document).ready(function() {
 	const randomNumber = Math.ceil(Math.random() * 100);
 	let kesempatan = 7;
-	let isLoggedIn = false;
+	let userData = localStorage.getItem("userData");
+
+	console.log(userData);
 
 	$("#kesempatan").html(kesempatan);
 	$("#successMessage").hide();
 
-	if (!isLoggedIn) {
+	if (!userData) {
 		$("#btnLogin").show();
 		$("#btnLogout").hide();
 	} else {
@@ -17,7 +19,7 @@ $(document).ready(function() {
 	$("#btnTebak").click(function() {
 		let value = $("#inputValue").val();
 
-		if (!isLoggedIn) {
+		if (!userData) {
 			Swal.fire({
 				icon: "warning",
 				title: "Oops...",
