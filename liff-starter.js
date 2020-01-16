@@ -158,11 +158,12 @@ function registerButtonHandlers() {
 					.sendMessages([
 						{
 							type: "text",
-							text: "Ayo ikutan main tebak angka!"
+							text:
+								"Ayo ikutan main tebak angka! \n https://liff-tebak-angka.herokuapp.com/"
 						}
 					])
 					.then(function() {
-						window.alert("https://liff-tebak-angka.herokuapp.com/");
+						window.alert("Pesan telah dikirim!");
 					})
 					.catch(function(error) {
 						window.alert("Error sending message: " + error);
