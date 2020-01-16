@@ -84,14 +84,15 @@ function initializeApp() {
 function displayLiffData() {
 	document.getElementById("isInClient").textContent = liff.isInClient();
 	document.getElementById("isLoggedIn").textContent = liff.isLoggedIn();
-	liff
-		.getProfile()
-		.then(function(data) {
-			localStorage.setItem("userData", JSON.stringify(data));
-		})
-		.then(function() {
-			window.location.reload();
-		});
+	if (!JSON.parse(localStorage.getItem("userData"))) {
+		liff
+			.getProfile()
+			.then(function(data) {
+				localStorage.setItem("userData", JSON.stringify(data));
+				window.location.reload();
+			})
+			.then(function() {});
+	}
 }
 
 /**
