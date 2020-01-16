@@ -86,7 +86,7 @@ function displayLiffData() {
 	document.getElementById("isLoggedIn").textContent = liff.isLoggedIn();
 	liff.getProfile().then(function(data) {
 		console.log(data);
-		localStorage.setItem("userData", data);
+		localStorage.setItem("userData", JSON.parse(data));
 	});
 }
 
