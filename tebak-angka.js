@@ -1,9 +1,7 @@
 $(document).ready(function() {
 	const randomNumber = Math.ceil(Math.random() * 100);
 	let kesempatan = 7;
-	let userData = localStorage.getItem("userData");
-
-	console.log(userData);
+	let userData = JSON.parse(localStorage.getItem("userData"));
 
 	$("#kesempatan").html(kesempatan);
 	$("#successMessage").hide();
