@@ -78,19 +78,11 @@ $(document).ready(function() {
 			Swal.queue([
 				{
 					title: "Reset!",
-					confirmButtonText: "Show my public IP",
-					text: "Your public IP will be received " + "via AJAX request",
+					confirmButtonText: "Refresh",
+					text: "Refresh ulang browser",
 					showLoaderOnConfirm: true,
 					preConfirm: () => {
-						return fetch(ipAPI)
-							.then(response => response.json())
-							.then(data => Swal.insertQueueStep(data.ip))
-							.catch(() => {
-								Swal.insertQueueStep({
-									icon: "error",
-									title: "Unable to get your public IP"
-								});
-							});
+						return window.location.reload();
 					}
 				}
 			]);
