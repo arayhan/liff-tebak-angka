@@ -128,8 +128,9 @@ function registerButtonHandlers() {
 		.getElementById("liffLoginButton")
 		.addEventListener("click", function() {
 			if (!liff.isLoggedIn()) {
-				liff.login();
-				window.location.reload();
+				liff.login().then(function() {
+					window.location.reload();
+				});
 			}
 		});
 
